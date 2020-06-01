@@ -1,0 +1,113 @@
+.slider {
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  z-index: 1;
+}
+
+.hidden-slide {
+  visibility: hidden;
+}
+
+.fas.fa-spinner.fa-spin {
+  font-size: 50px;
+  color: #bbbbbb;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+}
+
+.slider-item img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.arrow-img {
+    position: absolute;
+    width: 50px;
+    height: 50px
+}
+
+.slider-leftArrow, .slider-rightArrow {
+  position: absolute;
+  top: 47%;
+  z-index: 3;
+  color: #bbbbbb;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.slider-leftArrow {
+  left: 5%;
+}
+
+.slider-rightArrow {
+  right: 5%;
+}
+
+/* animation */
+
+.slider-leftToRightAnimation {
+  -webkit-animation-name: leftToRight;
+  animation-name: leftToRight;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  position: relative;
+}
+
+@-webkit-keyframes leftToRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.slider-rightToLeftAnimation {
+  -webkit-animation-name: rightToLeft;
+  animation-name: rightToLeft;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  position: relative;
+}
+
+@-webkit-keyframes rightToLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
